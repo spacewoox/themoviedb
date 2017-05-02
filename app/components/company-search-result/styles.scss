@@ -1,0 +1,30 @@
+& {
+  position: absolute;
+  left: 55px;
+  z-index: 1;
+  .card {
+    overflow: hidden;
+    .card-content {
+      height: 0px;
+      overflow: scroll;
+      padding: 0;
+
+      ul {
+        list-style-type: none;
+        margin: 0 !important;
+
+        li {
+          margin: 0 !important;
+          padding: 7px 5px 3px 10px;
+          font-size: 12px;
+          border-bottom: 1px solid #eaeaea;
+
+          &:hover {
+            cursor: pointer;
+            background-color: #f5f8fa;
+          }
+        }
+      }
+    }
+  }
+}

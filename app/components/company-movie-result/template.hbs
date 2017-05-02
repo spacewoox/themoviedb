@@ -1,0 +1,7 @@
+{{#each moviedb.movieResults as |movie|}}
+  {{movie-item
+    data=movie
+  }}
+{{else}}
+  No result.
+{{/each}}

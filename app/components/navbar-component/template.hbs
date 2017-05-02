@@ -1,0 +1,54 @@
+{{#bulma-nav hasShadow=true}}
+  {{#bulma-nav-left}}
+    <a class="nav-item" href="#">
+      <span class="icon">
+        <i class="fa fa-search"></i>
+      </span>
+    </a>
+    {{company-search-bar
+      class='nav-item'
+      resultExist=(action 'searchFocusOn')
+    }}
+  {{/bulma-nav-left}}
+
+  {{#bulma-nav-center}}
+    <a class="nav-item" href="#">
+      <span class="icon">
+        <i class="fa fa-github"></i>
+      </span>
+    </a>
+    <a class="nav-item" href="#">
+      <span class="icon">
+        <i class="fa fa-twitter"></i>
+      </span>
+    </a>
+  {{/bulma-nav-center}}
+
+  {{#bulma-nav-toggle}}
+    <span></span>
+    <span></span>
+    <span></span>
+  {{/bulma-nav-toggle}}
+
+  {{#bulma-nav-right isMenu=true}}
+    <a class="nav-item" href="#">
+      Home
+    </a>
+    <a class="nav-item" href="#">
+      Documentation
+    </a>
+    <a class="nav-item" href="#">
+      Blog
+    </a>
+
+    <span class="nav-item">
+      {{bulma-button icon="fa fa-twitter" label="Tweet"}}
+      {{bulma-button icon="fa fa-download" label="Download" isPrimary=true}}
+    </span>
+  {{/bulma-nav-right}}
+{{/bulma-nav}}
+{{#if searchBarHasFocus}}
+  {{company-search-result
+    clickClose=(action 'searchFocusOff')
+  }}
+{{/if}}

@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-96x96">
+          {{#if data.poster_full_path}}
+            <img src={{data.poster_full_path}} alt="Image">
+          {{else}}
+            No cover
+          {{/if}}
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-4">{{data.title}}</p>
+        <p class="subtitle is-6">{{data.production_companies}}</p>
+        <div class="content">
+          {{data.overview}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

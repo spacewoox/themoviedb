@@ -1,0 +1,35 @@
+<!--
+<ul>
+  {{#each moviedb.companySearchResult as |item|}}
+    <li {{ action 'selectCompany' item.id }}>{{item.name}} {{item.id}}</li>
+  {{/each}}
+</ul>
+-->
+
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      Company search results
+    </p>
+    <a class="card-header-icon" {{ action 'close' }}>
+      <span class="icon">
+        <i class="fa fa-close"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <ul>
+      {{#each moviedb.companySearchResult as |company|}}
+        <li {{ action 'selectCompany' company.id }}>
+          {{company.name}}
+        </li>
+      {{else}}
+        <p>
+          No result
+        </p>
+      {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
